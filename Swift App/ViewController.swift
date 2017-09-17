@@ -8,34 +8,33 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+
+    @IBOutlet weak var emojiTableView: UITableView!
     
-    
-    @IBOutlet weak var theLabel: UILabel!
-    @IBOutlet weak var text1: UITextField!
-    @IBOutlet weak var text2: UITextField!
-    
-    
-    @IBAction func Login(_ sender: Any) {
-        let addition = true
-        if addition{
-            theLabel.text = "Answer: \(Double(text1.text!)! + Double(text2.text!)!)"
-        }else{
-            theLabel.text = "Answer: \(Double(text1.text!)! - Double(text2.text!)!)"
-        }
-    }
-    
-    @IBAction func Home(_ sender: Any) {
-        theLabel.text = "Rafflr"
-    }
+    var emojis = ["😀","💩","😎","🤡","😑","🤠"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.darkGray
         
+        emojiTableView.dataSource = self
+        emojiTableView.delegate = self
         
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return emojis.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(indexPath.row)
+        let cell = UITableViewCell()
+        cell.textLabel?.text = emojis[indexPath.row]
+        return cell
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
