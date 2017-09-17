@@ -32,7 +32,7 @@ class DefinitionViewController: UIViewController {
             emojiDefinition.text = "Think You're Cool?"
         }
         if emoji == "🤡"{
-            emojiDefinition.text = "AAh FUCK a Clown"
+            emojiDefinition.text = "Aah FUCK a Clown"
         }
         if emoji == "😑"{
             emojiDefinition.text = "Fight me you lil bitch"

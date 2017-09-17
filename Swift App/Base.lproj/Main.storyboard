@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7YD-S0-RbY">
-                                <rect key="frame" x="0.0" y="104" width="375" height="563"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emoji Dictionary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sju-ZY-72m">
@@ -35,12 +35,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="7YD-S0-RbY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2Ot-8G-vWf"/>
                             <constraint firstItem="sju-ZY-72m" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="30" id="Btt-1o-U0I"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7YD-S0-RbY" secondAttribute="bottom" id="KCj-7M-GgL"/>
                             <constraint firstAttribute="trailing" secondItem="7YD-S0-RbY" secondAttribute="trailing" id="LKq-lE-piV"/>
                             <constraint firstItem="sju-ZY-72m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RGt-0y-riC"/>
                             <constraint firstItem="7YD-S0-RbY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vzx-L1-VT0"/>
-                            <constraint firstItem="7YD-S0-RbY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="wfb-pP-gQ3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mk2-Ks-1pc"/>
