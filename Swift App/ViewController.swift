@@ -27,7 +27,8 @@ class ViewController: UIViewController {
     @IBAction func Home(_ sender: Any) {
         theLabel.text = "Rafflr"
         print("Going Home")
-        /*let audiourl = NSURL.fileURL(withPath: Bundle.main.path(forResource: "audio", ofType: "m4a")!)
+        /*
+        let audiourl = NSURL.fileURL(withPath: Bundle.main.path(forResource: "audio", ofType: "m4a")!)
         do{
             try AVAudioSession.sharedInstance().setActive(true)
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
