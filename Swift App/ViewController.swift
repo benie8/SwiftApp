@@ -12,7 +12,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
 
     @IBOutlet weak var emojiTableView: UITableView!
     
-    var emojis = ["😀","💩","😎","🤡","😑","🤠"]
+    var emojis : [Emoji] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         
         emojiTableView.dataSource = self
         emojiTableView.delegate = self
-        
+        emojis = makeEmojiArray()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,7 +32,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print(indexPath.row)
         let cell = UITableViewCell()
-        cell.textLabel?.text = emojis[indexPath.row]
+        let emoji = emojis[indexPath.row]
+        cell.textLabel?.text = emoji.stringEmoji
         return cell
     }
     
@@ -43,7 +45,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let defVC = segue.destination as! DefinitionViewController
-        defVC.emoji = sender as! String
+        defVC.emoji = sender as! Emoji
     }
     
     
@@ -52,6 +54,45 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         // Dispose of any resources that can be recreated.
     }
     
-    
+    func makeEmojiArray() -> [Emoji]{
+        let emoji1 = Emoji()
+        emoji1.stringEmoji = "😀"
+        emoji1.birthYear = 2010
+        emoji1.category = "Smiley"
+        emoji1.definition = "Happy Days"
+        
+        let emoji2 = Emoji()
+        emoji2.stringEmoji = "💩"
+        emoji2.birthYear = 2010
+        emoji2.category = "Shit"
+        emoji2.definition = "This Is Shit"
+        
+        let emoji3 = Emoji()
+        emoji3.stringEmoji = "😎"
+        emoji3.birthYear = 2010
+        emoji3.category = "Cunt"
+        emoji3.definition = "You think you're cool?"
+        
+        
+        let emoji4 = Emoji()
+        emoji4.stringEmoji = "🤡"
+        emoji4.birthYear = 2010
+        emoji4.category = "Clown"
+        emoji4.definition = "Aah FUCK a Clown"
+        
+        let emoji5 = Emoji()
+        emoji5.stringEmoji = "😑"
+        emoji5.birthYear = 1996
+        emoji5.category = "Lil Bitch"
+        emoji5.definition = "Fight me you lil bitch"
+        
+        let emoji6 = Emoji()
+        emoji6.stringEmoji = "🤠"
+        emoji6.birthYear = 2010
+        emoji6.category = "Fuck Off"
+        emoji6.definition = "No one likes country music"
+        
+        return [emoji1, emoji2, emoji3, emoji4, emoji5, emoji6]
+    }
 }
 
