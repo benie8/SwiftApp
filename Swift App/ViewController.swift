@@ -92,7 +92,14 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         emoji6.category = "Fuck Off"
         emoji6.definition = "No one likes country music"
         
-        return [emoji1, emoji2, emoji3, emoji4, emoji5, emoji6]
+        let emoji7 = Emoji()
+        emoji7.stringEmoji = "🍆"
+        emoji7.birthYear = 1
+        emoji7.category = "Eggplant"
+        emoji7.definition = "ITS A HUGE EGGPLANT"
+
+
+        return [emoji1, emoji2, emoji3, emoji4, emoji5, emoji6, emoji7]
     }
 }
 
